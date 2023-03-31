@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/action_bar_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="colorOnPrimary">@color/action_bar_blue</item>
+    </style>
+</resources>

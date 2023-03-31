@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        tools:context=".DeleteProfile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:background="@color/action_bar_blue" >
+
+                <TextView
+                    android:id="@+id/tv_delete_user_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Delete your profile"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_delete_user_instruction"
+                    android:layout_below="@+id/tv_delete_user_head"
+                    android:text="You can delete your profile after authenticating with your current password"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/border"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_del_profile_password"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/ivDelProfilePassword"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/password" />
+
+                    <TextView
+                        android:id="@+id/tv_delete_user_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ivDelProfilePassword"
+                        android:padding="6dp"
+                        android:text="Password*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_del_profile_password"
+                        android:layout_below="@id/tv_delete_user_password"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:id="@+id/et_delete_user_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_delete_user_password"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/ivDelProfilePassword"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your password"
+                        android:inputType="textPassword"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/iv_show_hide_del_profile_password"
+                        android:layout_below="@id/tv_delete_user_password"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_delete_user_authenticate"
+                    android:layout_below="@id/rl_del_profile_password"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="Authenticate"
+                    android:backgroundTint="@color/teal_200" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:elevation="10dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/action_bar_blue"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:layout_margin="15dp"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_delete_user_authenticated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="6dp"
+                    android:text="Your profile is not verified/authenticated yet!"
+                    android:textAlignment="center"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_delete_user"
+                    android:layout_below="@id/tv_delete_user_authenticated"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Delete Profile"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/action_bar_blue" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

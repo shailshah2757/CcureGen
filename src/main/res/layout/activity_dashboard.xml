@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Dashboard">
+
+        <TextView
+            android:id="@+id/tv_Dashboard_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Security Tools"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_sub_heding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Dashboard_head"
+            android:layout_centerHorizontal="true"
+            android:text="Data is secured here!!"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom_navigation"
+            android:layout_below="@id/tv_sub_heding"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/hashing"
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/hashing_bg"
+                    android:clickable="true"
+                    android:onClick="hashing"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Hashing"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Data integrity verification method"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/snort_rules_bg"
+                    android:clickable="true"
+                    android:onClick="snort_rules"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Snort Rules"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Network-based threat detection"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/steganography_bg"
+                    android:clickable="true"
+                    android:onClick="steganography"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Steganography"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Secret message hiding technique."
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/password_cracking_bg"
+                    android:clickable="true"
+                    android:onClick="password_cracking"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Password Cracking"
+                            android:textColor="@color/black"
+                            android:textSize="23sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Password decryption attempt method."
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_gray"
+            app:itemIconTint="@color/action_bar_blue"
+            app:itemTextColor="@color/action_bar_blue"
+            app:menu="@menu/bottom_nav_menu" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/action_bar_blue"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

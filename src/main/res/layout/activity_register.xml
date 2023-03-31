@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_container"
+    android:theme="@style/Text_reg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        tools:context=".Register">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/action_bar_blue" >
+
+                <TextView
+                    android:id="@+id/tv_register_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:text="Sign Up"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_register_instruction"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_below="@+id/tv_register_head"
+                    android:text="Please register yourself to continue with the application!"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/border"
+                android:padding="15dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_full_name"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_full_name"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:id="@+id/tv_register_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/iv_full_name"
+                        android:padding="6dp"
+                        android:text="Full Name*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_reg_full_name"
+                        android:layout_below="@+id/tv_register_full_name"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:id="@+id/et_register_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_register_full_name"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/iv_full_name"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your full name"
+                        android:inputType="textPersonName"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_reg_email"
+                    android:layout_below="@id/rl_full_name"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_reg_email"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/email" />
+
+                    <TextView
+                        android:id="@+id/tv_register_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv_reg_email"
+                        android:padding="6dp"
+                        android:text="Email*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_reg_email"
+                        android:layout_below="@+id/tv_register_email"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:id="@+id/et_register_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_register_email"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/iv_reg_email"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your email address"
+                        android:padding="6dp"
+                        android:inputType="textEmailAddress"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_reg_dob"
+                    android:layout_below="@id/rl_reg_email"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_reg_dob"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/birthday" />
+
+                    <TextView
+                        android:id="@+id/tv_register_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/iv_reg_dob"
+                        android:padding="6dp"
+                        android:text="Date of Birth (dd/mm/yyyy)*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_reg_dob"
+                        android:layout_below="@+id/tv_register_dob"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:id="@+id/et_register_dob"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_register_dob"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/iv_reg_dob"
+                        android:background="@android:color/transparent"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:hint="Select your date of birth"
+                        android:inputType="date"
+                        android:focusable="false"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_reg_datePicker"
+                        android:layout_below="@id/tv_register_dob"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/et_register_dob"
+                        android:src="@drawable/calendar" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_reg_gender"
+                    android:layout_below="@id/rl_reg_dob"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_reg_gender"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/gender" />
+
+                    <TextView
+                        android:id="@+id/tv_register_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv_reg_gender"
+                        android:padding="6dp"
+                        android:text="Gender*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_reg_gender"
+                        android:layout_below="@+id/tv_register_gender"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_register_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_register_gender"
+                        android:layout_toEndOf="@id/iv_reg_gender"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbtn_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/action_bar_blue"
+                            android:text="Female"
+                            android:textColor="#555555"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:buttonTint="@color/action_bar_blue"
+                            android:text="Male"
+                            android:textColor="#555555"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:buttonTint="@color/action_bar_blue"
+                            android:text="Others"
+                            android:textColor="#555555"
+                            android:textSize="16sp" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_reg_mobile"
+                    android:layout_below="@+id/rl_reg_gender"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_reg_mobile"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/mobile" />
+
+                    <TextView
+                        android:id="@+id/tv_register_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv_reg_mobile"
+                        android:padding="6dp"
+                        android:text="Mobile*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_reg_mobile"
+                        android:layout_below="@+id/tv_register_mobile"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:id="@+id/et_register_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_register_mobile"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/iv_reg_mobile"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your mobile no."
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:inputType="phone"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_reg_password"
+                    android:layout_below="@id/rl_reg_mobile"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_reg_password"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/password" />
+
+                    <TextView
+                        android:id="@+id/tv_register_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv_reg_password"
+                        android:padding="6dp"
+                        android:text="Password*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_reg_password"
+                        android:layout_below="@+id/tv_register_password"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:id="@+id/et_register_password"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_register_password"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/iv_reg_password"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your password"
+                        android:inputType="textPassword"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/iv_show_hide_password"
+                        android:layout_below="@id/tv_register_password"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_reg_confirm_password"
+                    android:layout_below="@id/rl_reg_password"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/iv_reg_confirm_password"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/confirm_password" />
+
+                    <TextView
+                        android:id="@+id/tv_register_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iv_reg_confirm_password"
+                        android:padding="6dp"
+                        android:text="Confirm Password*" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_reg_confirm_password"
+                        android:layout_below="@+id/tv_register_confirm_password"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:id="@+id/et_register_confirm_password"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_register_confirm_password"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/iv_reg_confirm_password"
+                        android:background="@android:color/transparent"
+                        android:hint="Confirm your password"
+                        android:inputType="textPassword"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/iv_show_hide_confirm_password"
+                        android:layout_below="@id/tv_register_confirm_password"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp" />
+
+                </RelativeLayout>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkbox_terms_conditions"
+                    android:layout_below="@id/rl_reg_confirm_password"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/action_bar_blue"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="I agree with the Terms of Service and Privacy Policy"
+                    android:textColor="#444" />
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/checkbox_terms_conditions"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#0F26A3"
+                    android:text="Register" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:elevation="10dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/action_bar_blue"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

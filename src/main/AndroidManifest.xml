@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/cropped_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.CcureGen"
+        tools:targetApi="31">
+        <activity
+            android:name=".Decode"
+            android:exported="false" />
+        <activity
+            android:name=".Encode"
+            android:exported="false" />
+        <activity
+            android:name=".GoogleSignInActivity"
+            android:exported="false" />
+        <activity android:name=".UploadProfilePic">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UserProfile" />
+        </activity>
+        <activity android:name=".ForgotPassword">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity android:name=".DeleteProfile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UserProfile" />
+        </activity>
+        <activity android:name=".ChangePassword">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UserProfile" />
+        </activity>
+        <activity android:name=".UpdateEmail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UserProfile" />
+        </activity>
+        <activity android:name=".UpdateProfile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UserProfile" />
+        </activity>
+        <activity android:name=".SnortRules"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+
+
+
+
+
+        </activity>
+        <activity android:name=".Steganography"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+
+        </activity>
+        <activity android:name=".PasswordCracking">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+        </activity>
+        <activity
+            android:name=".Hashing"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dashboard" />
+
+
+        </activity>
+        <activity android:name=".Dashboard">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity android:name=".Login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity android:name=".UserProfile">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity android:name=".Register">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

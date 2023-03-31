@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        tools:context=".UpdateProfile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:background="@color/action_bar_blue" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_update_profile_head"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"
+                    android:text="Update your Profile"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_update_profile_instruction"
+                    android:text="You can update your personal information"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/border"
+                android:padding="15dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_update_profile_name"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/ivUpdateProfileName"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_update_profile_name"
+                        android:layout_toEndOf="@id/ivUpdateProfileName"
+                        android:padding="6dp"
+                        android:text="Name" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_update_profile_name"
+                        android:layout_below="@+id/tv_update_profile_name"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_update_profile_name"
+                        android:layout_below="@id/tv_update_profile_name"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Enter your full name"
+                        android:layout_toEndOf="@id/ivUpdateProfileName"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPersonName"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_update_profile_dob"
+                    android:layout_below="@id/rl_update_profile_name"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/ivUpdateProfileDob"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/birthday" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_update_profile_dob"
+                        android:layout_toEndOf="@id/ivUpdateProfileDob"
+                        android:padding="6dp"
+                        android:text="Date of Birth (dd/mm/yyyy)" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_update_profile_dob"
+                        android:layout_below="@+id/tv_update_profile_dob"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_update_profile_dob"
+                        android:layout_below="@id/tv_update_profile_dob"
+                        android:hint="Select your date of birth"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/ivUpdateProfileDob"
+                        android:background="@android:color/transparent"
+                        android:inputType="date"
+                        android:padding="6dp"
+                        android:focusable="false"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/ivUpdateProfileDatePicker"
+                        android:layout_below="@id/tv_update_profile_dob"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/et_update_profile_dob"
+                        android:src="@drawable/calendar" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_update_profile_gender"
+                    android:layout_below="@id/rl_update_profile_dob"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/ivUpdateProfileGender"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/gender" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_update_profile_gender"
+                        android:layout_toEndOf="@id/ivUpdateProfileGender"
+                        android:padding="6dp"
+                        android:text="Gender" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_update_profile_gender"
+                        android:layout_below="@+id/tv_update_profile_gender"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rg_update_profile_gender"
+                        android:layout_below="@+id/tv_update_profile_gender"
+                        android:layout_toEndOf="@id/ivUpdateProfileGender"
+                        android:contentDescription=""
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/action_bar_blue"
+                            android:id="@+id/radio_female"
+                            android:text="Female"
+                            android:textSize="16sp"
+                            android:textColor="#666666" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/action_bar_blue"
+                            android:id="@+id/radio_male"
+                            android:text="Male"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="16sp"
+                            android:textColor="#666666" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/action_bar_blue"
+                            android:id="@+id/radio_others"
+                            android:text="Others"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="16sp"
+                            android:textColor="#666666" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_update_profile_mobile"
+                    android:layout_below="@id/rl_update_profile_gender"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border" >
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/ivUpdateProfileMobile"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/mobile" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_update_profile_mobile"
+                        android:layout_toEndOf="@id/ivUpdateProfileMobile"
+                        android:padding="6dp"
+                        android:text="Mobile" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:id="@+id/divider_update_profile_mobile"
+                        android:layout_below="@+id/tv_update_profile_mobile"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/dark_gray" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_update_profile_mobile"
+                        android:layout_below="@id/tv_update_profile_mobile"
+                        android:hint="Enter your mobile no."
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/ivUpdateProfileMobile"
+                        android:background="@android:color/transparent"
+                        android:inputType="phone"
+                        android:padding="6dp"
+                        android:textCursorDrawable="@drawable/etcursor"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_update_profile"
+                    android:text="Update profile"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:layout_below="@id/rl_update_profile_mobile"
+                    android:backgroundTint="@color/action_bar_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_upload_profile_pic"
+                    android:layout_below="@id/btn_update_profile"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/upload_profile_pic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_update_profile_email"
+                    android:layout_below="@id/btn_update_profile"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/update_email" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:elevation="10dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/action_bar_blue"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

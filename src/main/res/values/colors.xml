@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#754ee4</color>
+    <color name="purple_700">#644ac3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="lime">#00FF00</color>
+    <color name="dark_green">#006400</color>
+    <color name="light_gray">#edf2f7</color>
+    <color name="dark_gray">#5A5A5A</color>
+    <color name="action_bar_blue">#0F26A3</color>
+    <color name="top_bg_dashboard">#EEEBEB</color>
+    <color name="hashing_start">#F56BD2</color>
+    <color name="hashing_end">#A20BBD</color>
+    <color name="snort_rules_start">#F0A12C</color>
+    <color name="snort_rules_end">#F06406</color>
+    <color name="password_cracking_start">#E98F0B</color>
+    <color name="password_cracking_end">#F8CA40</color>
+    <color name="steganography_start">#EBF39B73</color>
+    <color name="steganography_end">#F38524</color>
+    <color name="color9">#C11CDD</color>
+    <color name="color10">#526AEE</color>
+    <color name="color11">#3EC2FA</color>
+    <color name="color12">#526AEE</color>
+</resources>

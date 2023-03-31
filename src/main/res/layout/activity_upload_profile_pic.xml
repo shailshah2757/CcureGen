@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        tools:context=".UploadProfilePic">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_upload_pic_head"
+                android:text="Upload your profile pic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAlignment="center" />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/upload_pic_choose_button"
+                android:layout_below="@id/tv_upload_pic_head"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Choose Picture"
+                android:backgroundTint="@color/action_bar_blue" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:id="@+id/iv_profile_dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:contentDescription="ImageView to Display Pic"
+                android:layout_below="@+id/upload_pic_choose_button" />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/upload_pic_button"
+                android:layout_below="@id/iv_profile_dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="Upload"
+                android:backgroundTint="@color/action_bar_blue" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/action_bar_blue"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

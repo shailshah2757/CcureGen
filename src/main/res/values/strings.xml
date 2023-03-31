@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CcureGen</string>
+    <string name="register"><u>Register</u></string>
+    <string name="click_here_to_reset"><u>Click here to reset</u></string>
+    <string name="upload_profile_pic"><u>Upload Profile Pic</u></string>
+    <string name="update_email"><u>Update Email</u></string>
+    <string name="user_display_picture">Loading...</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="Dob">Date of Birth</string>
+    <string name="Gender">Gender</string>
+    <string name="Mobile">Mobile</string>
+</resources>
